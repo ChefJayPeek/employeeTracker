@@ -72,12 +72,12 @@ function viewEmployee() {
     console.log("Employee List:\n");
 
 	var query = `SELECT e.id, e.first_name, e.last_name, r.title, d.name AS department, r.salary, CONCAT(m.first_name, ' ', m.last_name) AS manager
-  FROM employee e
-  LEFT JOIN role r
+	FROM employee e
+	LEFT JOIN role r
 	ON e.role_id = r.id
-  LEFT JOIN department d
-  ON d.id = r.department_id
-  LEFT JOIN employee m
+	LEFT JOIN department d
+	ON d.id = r.department_id
+	LEFT JOIN employee m
 	ON m.id = e.manager_id`;
 
 	connection.query(query, function (err, res) {
@@ -97,9 +97,9 @@ function viewEmployeeByManager() {
 
 	var query = `SELECT e.manager_id, CONCAT(m.first_name, ' ', m.last_name) AS manager FROM employee e LEFT JOIN role r
 	ON e.role_id = r.id
-  	LEFT JOIN department d
-  	ON d.id = r.department_id
-  	LEFT JOIN employee m
+	LEFT JOIN department d
+	ON d.id = r.department_id
+	LEFT JOIN employee m
 	ON m.id = e.manager_id GROUP BY e.manager_id`;
 
 	connection.query(query, function (err, res) {
@@ -351,8 +351,7 @@ const updateEmployeeRole = () => {
 	// Select Employee to update
 	let employees = [];
 	connection.query(
-		`SELECT id, first_name, last_name
-  FROM employee`,
+		`SELECT id, first_name, last_name FROM employee`,
 		(err, res) => {
 			if (err) throw err;
 
@@ -435,7 +434,7 @@ function deleteEmployee() {
 	console.log("Deleting an employee");
 
 	var query = `SELECT e.id, e.first_name, e.last_name
-      FROM employee e`;
+    	FROM employee e`;
 
 	connection.query(query, function (err, res) {
 		if (err) throw err;
