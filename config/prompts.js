@@ -62,7 +62,7 @@ module.exports = {
             message: "Enter employee's first name",
         },
         {
-            name: "lasatName",
+            name: "lastName",
             type: "input",
             message: "Enter employee's last name",
         },
@@ -122,7 +122,7 @@ module.exports = {
         },
     ],
     //Update Manager
-    updateManager: (empoloyees) => [
+    updateManager: (employees) => [
         {
             name: "update",
             type: "list",
