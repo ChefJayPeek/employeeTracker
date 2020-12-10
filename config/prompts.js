@@ -8,11 +8,11 @@ module.exports = {
         choices: [
             // View choices
             "View Employees",
-            "Veiw Employees by Manager",
+            "View Employees by Manager",
             "View Employees by Department",
             "View Departments",
             "View Roles",
-            "Veew Department Budget",
+            "View Department Budget",
             // Add choices
             "Add Employee",
             "Add Department",
@@ -69,7 +69,13 @@ module.exports = {
         {
             name: "department",
             type: "list",
-            message: "Choose employee's job position",
+            message: "Choose employee's department",
+            choices: departmentArray,
+        },
+        {
+            name: "role",
+            type: "list",
+            message: "Choose employee's role",
             choices: roleArray,
         },
         {
