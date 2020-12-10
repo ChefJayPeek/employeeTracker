@@ -8,11 +8,11 @@ module.exports = {
         choices: [
             // View choices
             "View Employees",
-            "View Employees by Manager",
+            "Veiw Employees by Manager",
             "View Employees by Department",
-            "View Departmenst",
+            "View Departments",
             "View Roles",
-            "Vew Department Budget",
+            "Veew Department Budget",
             // Add choices
             "Add Employee",
             "Add Department",
